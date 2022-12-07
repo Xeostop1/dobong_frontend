@@ -37,7 +37,7 @@
 					if(m==null){
 				%>
 						<a href="login.jsp">로그인</a>
-						<a href="join.jsp">회원가입</a>
+						<a href="agree.jsp">회원가입</a>
 				<%		
 					}
 

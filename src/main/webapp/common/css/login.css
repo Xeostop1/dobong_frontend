@@ -30,6 +30,10 @@ h1{
 .loginMenu{
 	margin:50px 70px 70px 70px;
 }
+.login_h1{
+	cursor: pointer;
+}
+
 .login_id {
   margin-top: 40px;
   width: 100%;

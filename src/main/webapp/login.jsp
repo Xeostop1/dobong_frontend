@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>로그인페이지</title>
 		<link rel="stylesheet" href="./common/css/login.css">
+		<script src="./common/script/login.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -13,7 +14,7 @@
 				<form action="LoginServlet" method="post" id="frm" name=frm>
 					<div class="loginMenu">
 						<div class="loing_h1">
-							<h1 onclick="location.href='landing.jsp'">D O B O N G</h1>
+							<h1 onclick="gohome()">D O B O N G</h1>
 						</div>
 						<div class="login_id">
 							<h4>ID</h4>
@@ -36,21 +37,5 @@
 				</form>
 			</div>	
 		</div>		
-		<script type="text/javascript">
-			function check() {
-				let id=document.frm.id.value;
-				console.log(id);
-				let password=document.frm.password.value;
-				
-				if(id.length===0){
-					alert("id를 입력해주세요");
-					return false;
-				}else if(password.length===0){
-					alert("비밀번호를 입력해주세요");
-					return false;
-				}
-				return true;
-			}
-		</script>
-		</body>
+	</body>
 </html>
