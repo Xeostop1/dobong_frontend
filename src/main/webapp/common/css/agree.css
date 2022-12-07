@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+html{
+	background: rgba(0,0,0,0.1);
+}
+body{
+	margin: 0 auto;
+}
+h1{
+	color:rgb(22, 163, 255);
+	cursor: pointer;
+}
+#wrap{
+	padding:40px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.toswrap{
+	width:800px;
+	text-align: center;
+	background: white;
+	border-radius: 20px;
+	padding:30px 70px 30px 70px;
+}
+p{
+	font-weight: bold;
+	color:black;
+}
+p span{
+	font-size: 12px;
+}
+.tosAll {
+  margin:15px 0 -10px 0;
+  color:rgb(22, 163, 255);
+}
+.tosAll input {
+  margin-bottom: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+.tosCheck, .tosCheckAll{
+	cursor: pointer;
+}
+.tosCheck input{
+	margin-top:50px;
+}
+.tosText{
+	width:660px;
+	height:200px;
+	margin:0 auto;
+	padding:10px 20px 10px 20px;
+	border:1px solid black;
+	font-size:12px;	
+	overflow:auto;
+	text-align:left;
+	color:black;
+	border-radius: 20px;
+	background-color: white;
+	resize: none;
+}
+.bigtos{
+	font-size:12px;
+	font-weight:bold;
+	margin:10px 10px 0 10px;
+	color:black;
+	text-align:right;
+}
+.bigtos span{
+	cursor:pointer;
+}
+h3{
+	margin-left:25px;
+}
+.navybold{
+	color:navy;
+	font-weight: bold;
+	margin-top:10px;
+}
+ol{
+	margin-top:0;
+	list-style-type: decimal;
+}
+.ul_alpha{
+	list-style-type: upper-alpha;
+}
+ol li, ul li{
+	margin-left:15px;
+}
+.agree_submit {
+  margin:35px 1px 0 1px;
+  text-align: center;
+}
+.agree_submit input {
+  width: 150px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgb(22, 163, 255), rgb(22, 163, 255));
+  color: white;
+  margin:0 auto;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#bigwrap1, #bigwrap2{
+	background-color: white;
+	border:20px solid white;
+	padding:20px;
+	margin-left:5px;
+}
+.btnP{
+	text-align: center;
+}
+.btnP button{
+	background-color:rgb(22, 163, 255);
+	color:white;
+	width: 150px;
+	height: 50px;
+	border:0;
+	outline: none;
+	border-radius: 40px;
+	cursor: pointer;
+	margin:0 auto;
+	font-size: 1.2em;
+ 	letter-spacing: 2px;
+}
