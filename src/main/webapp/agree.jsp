@@ -14,7 +14,7 @@
 			<div class="toswrap">
 				<form action="join.jsp" method="post">
 					<div class="tos_title">
-					<!-- 랜딩서블릿으로 갈 수있게 수정 Xeo-->
+					<!-- 랜딩서블릿으로 갈 수있게 수정 git 테스트 중입니다-->
 						<h1 onclick="gohome()">D O B O N G</h1>
 					</div>
 					
