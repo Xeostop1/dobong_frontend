@@ -1,11 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ page import="Beans.MemberDTO"  %>
-<!DOCTYPE html>
-	<html>
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Dobog DDanBong</title>
+		<title>D2obong DDanBong</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,14 +24,18 @@
 	<body class="is-preload">
 		<!-- Header -->
 			<header id="header">
-				<h1>도 / 봉 / 따 / 봉 </h1>
+				<div id="dodda" onclick="window.scrollTo(0, 0)"><h1>도 / 봉 / 따 / 봉 </h1></div>
 				<nav>
 					<ul>
+						<li><a href="LandingServlet">Home</a></li>
+						<li><a href="#intro">Intro</a></li>
 						<li><a href="#one_park">Park</a></li>
 						<li><a href="#two_culture">Culture</a></li>
 						<li><a href="#one_cafe">Cafe</a></li>
 						<li><a href="#two_restaurant">Restaurant</a></li>
 						<li><a href="#one_etc">etc</a></li>
+						<li><a href="#gallery">gallery</a></li>
+						<li><a href="#contact">contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -37,7 +45,7 @@
 				<div class="content">
 					<header>
 						<br><br><br>
-						<h2>도 / 봉 / 따 / 봉</h2>
+						<h2>도 / 봉 / 따 / 봉 </h2>
 					</header>
 
 					<p>서울치고는 뭔가 조금 더디고 머나먼 이곳은 <br>
@@ -47,10 +55,10 @@
 					시간이 머문 세월이라는 바탕에 
 					새로운 무언가를 칠 할 수 있는 공간이 많은, <br><strong>도봉스러운 장소</strong>를 테마별로 찾아가 보았다.  </p>
 					<p class="p_small">
-						#무중력지대도봉 #로컬 #생활 #맛집 #문화 
+						#무중력지대도봉 #지적허영 #로컬 #생활 
 					</p>
 					<footer>
-						<a href="LandingServlet" class="button style2 down">More</a>
+						<a href="#one_park" class="button style2 down">More</a>
 					</footer>
 				</div>
 			</section>
@@ -70,7 +78,7 @@
 						복잡했던 마음이 조금씩 차분해 질 것이다. 
 					</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#two_culture" class="button style2 down anchored">Next</a>
 			</section>
 			
 
@@ -85,7 +93,7 @@
 						<span class="span_center">-키케로-<br><br></span>
 						종종 책이 필요할 때가 있다. 과거·현재·미래안에 사람과<br> <strong>삶이 밀도있게 담겨있는 공간</strong>을 찾아가보았다.</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#one_cafe" class="button style2 down anchored">Next</a>
 			</section>
 
 			<!-- One /Cafe -->
@@ -104,7 +112,7 @@
 						베이커리, 풍경, 식물, 문화까지 맛깔나는 조화를 이룬 <br>
 						<strong>도봉에 있는 카페의 다양한 면면</strong>을 살펴보았다.</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#two_restaurant" class="button style2 down anchored">Next</a>
 			</section>
 			
 			<!-- Two /Restaurant-->
@@ -120,7 +128,7 @@
 						<strong>다양한 선택지 중 하나로 존중받기 시작한 변화</strong>를 <br>공간으로 기록했다.
 					</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#one_etc" class="button style2 down anchored">Next</a>
 			</section>
 				<!-- One /etc -->
 				<section id="one_etc" class="main style2 right dark fullscreen">
@@ -136,7 +144,7 @@
 
 					</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Work -->
@@ -154,6 +162,7 @@
 					</header>
 
 					<!-- Gallery  -->
+					<div id="gallery">
 						<div class="gallery">
 							<article class="from-left">
 								<a href="images/img/park/park1.jpg" class="image fit"><img class="img_size" src="images/img/park/park1.jpg" title="Park 우이천" alt="" /></a>
@@ -174,7 +183,7 @@
 								<a href="images/img/Culture/Culture4.jpg" class="image fit"><img class="img_size" src="images/img/Culture/Culture4.jpg" title="Culture 김수영문학관" alt="" /></a>
 							</article>
 						</div>
-
+					</div>
 				</div>
 			</section>
 
@@ -215,7 +224,7 @@
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>Copyright ⓒ 무중력지대도봉 도봉따봉 all rights reserved.</li><li>Design:>HTML5 UP</a></li>
+						<li>Copyright ⓒ 무중력지대도봉 도봉따봉 all rights reserved.</li>
 					</ul>
 
 			</footer>
@@ -229,5 +238,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
