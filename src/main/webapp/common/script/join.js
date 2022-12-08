@@ -1,20 +1,13 @@
 function gohome(){
-	//랜딩서블릿으로 갈수 있게 수정
- 	location.href="LandingServlet";
-}
-
-function onlyNumber(e){
-		if(e.keyCode >= 48 && e.keycode <=57){
-		alert("ok");
-		return true;
-		
-	}else{
-		return false;
-		
+	if(window.confirm("작성한 정보가 모두 사라집니다. 정말 돌아가시겠습니까?")){
+		location.href="LandingServlet";
 	}
-	
+	else{
+		return false;
+	}	
 }
 
+/* 전화 번호 input 자동 tab */
 function moveinput(){
 	if( document.getElementById("phone2").value.length === 0)
 	{
@@ -46,7 +39,6 @@ function moveinput(){
 	// 추가적인 조건이 필요함
 	// else문 하나로 퉁치려다보니 코드가 꼬였고, 이를 결국 해결 못했음
 	// else if 등으로 조건을 완벽하게 잡아야 버그가 안 생길듯함
-	
 	
 	if( document.getElementById("phone3").value.length === 0)
 	{
@@ -86,13 +78,9 @@ function moveinput(){
 			}
 		});
 	}
-	// '숫자만 입력' 조건식은 맨 앞에 넣는 것이 나아보임
-	// 코드가 지저분해지니 함수를 분할해서 사용
 }
-
-
-function postcode(){
-	
+/* 우편 번호 */
+function postcode(){	
 	new daum.Postcode({
 		oncomplete:function(data){
 	    	document.getElementById("post_road").value = data.address; // 주소 넣기
@@ -101,6 +89,67 @@ function postcode(){
 		}
 	}).open();
 }
+/* 비밀번호 input 타입 변경 */
+function pwd_change(){
+	var pwd = document.getElementById("password");
+	var chk_pwd = document.getElementById("check_password");
+	var btn = document.getElementById("pwd_btn");
+		
+	if(pwd.type=="password" && chk_pwd.type=="password"){
+		pwd.type="text";
+		chk_pwd.type="text";
+		btn.value="비밀번호 가리기";
+	}else if(pwd.type=="text" && chk_pwd.type=="text"){
+		pwd.type="password";
+		chk_pwd.type="password";
+		btn.value="비밀번호 보기";
+	}
+}
+function email(){
+	var opt = document.sMail;
+	
+	
+}
+	
+function emailChange(){
+	var opt = document.getElementById("emailList");
+	var optTxt = opt.options[opt.selectedIndex].text;
+	var optTxx = document.getElementById('emailBody');
+	
+	emailText();
+
+}
+
+function emailText(){
+	var txx = document.getElementById("emailBody");
+	var opt = document.getElementById("textOption");
+		
+	var radioArray = document.getElementsByName("radioOption");
+            for (var i = 0; i < radioArray.length; i++) {
+                if (radioArray[i].value == opt.value) {
+                    radioArray[i].checked = true;
+                }
+			}
+}
+
+/* 가입 이유 글자수 표시 */
+function counter(text,length){
+	var lmt = length;
+	var str = text.value.length;
+	
+	if(str>lmt){
+		alert("글자 수는 40자를 초과할 수 없습니다.")
+		text.value=text.value.substring(0,lmt);
+		text.focus();
+	}
+	document.getElementById("cntsp").innerHTML = str + " / " + lmt;	
+}
+
+
+
+
+
+/* 취소, 리셋 */
 function goBack(){
 	if(window.confirm("작성한 정보가 모두 사라집니다. 정말 돌아가시겠습니까?")){
 		window.history.back();
@@ -117,30 +166,9 @@ function re_set(){
 		return false;
 	}
 }
-
-function pwd_change(){
-	var pwd = document.getElementById("password");
-	var chk_pwd = document.getElementById("check_password");
-	var btn = document.getElementById("pwd_btn");
-		
-	if(pwd.type=="password" && chk_pwd.type=="password"){
-		pwd.type="text";
-		chk_pwd.type="text";
-		btn.value="비밀번호 가리기";
-	}else if(pwd.type=="text" && chk_pwd.type=="text"){
-		pwd.type="password";
-		chk_pwd.type="password";
-		btn.value="비밀번호 보기";
-	}
-	return pwd.focus();
-	
-}	
-
-
-
+/* 유효성 검사 */
 function signUpCheck(){
-	/* 유효성 검사 */
-	
+
 	var check = document.join;
 	/* 
 		value넣은 변수로 수정할 예정
@@ -150,7 +178,6 @@ function signUpCheck(){
 		join.name.focus();
 		return 
 	}
-	
 	else if(!/^[가-힣]{1,6}$/.test(check.name.value)){
 		alert("아이디를 제대로 !!!! 한글로@! 입력해주세요.");
 		join.name.focus();
@@ -208,68 +235,6 @@ function signUpCheck(){
 	/* 캡스락 넣을 것 */
 }
 
-function counter(text,length){
-	var lmt = length;
-	var str = text.value.length;
-	
-	if(str>lmt){
-		alert("글자 수는 200자를 초과할 수 없습니다.")
-		text.value=text.value.substring(0,lmt);
-		text.focus();
-	}
-	document.getElementById("cntsp").innerHTML = str + " / " + lmt;	
-}
 
 
 
-
-
- function emailChange(){
-	var opt = document.getElementById("emailList");
-	var optTxt = opt.options[opt.selectedIndex].text;
-	var optTxx = document.getElementById('emailBody');
-	
-	emailText();
-
-}
-
-function emailText(){
-	var txx = document.getElementById("emailBody");
-	var opt = document.getElementById("textOption");
-		
-	var radioArray = document.getElementsByName("radioOption");
-            for (var i = 0; i < radioArray.length; i++) {
-                if (radioArray[i].value == opt.value) {
-                    radioArray[i].checked = true;
-                }
-			}
-}
-
-
-
-
-function SignUpCheck(){
-	
-}
-/*
-function emailChange(){
-	var opt = document.getElementById("emailList");
-	var optTxt = opt.options[opt.selectedIndex].text;
-	var optTxx = document.getElementById('emailBody');
-	
-	emailText();
-
-}
-
-function emailText(){
-	var txx = document.getElementById("emailBody");
-	var opt = document.getElementById("textOption");
-		
-	var radioArray = document.getElementsByName("radioOption");
-            for (var i = 0; i < radioArray.length; i++) {
-                if (radioArray[i].value == opt.value) {
-                    radioArray[i].checked = true;
-                }
-			}
-}
-*/

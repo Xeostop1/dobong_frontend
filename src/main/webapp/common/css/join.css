@@ -37,26 +37,43 @@ body{
 }
 .contents{
 	width:800px;
-	height:28px;
+	height:40px;
 }
 .con{
-	width:800px;
+	width:660px;
+	height:35px;
 	display: inline-block;
 }
+.con input{
+	padding:5px;
+	height:32px;
+	border-radius: 2px;
+}
 .con_left{
-	width:250px;
+	width:150px;
 	text-align:left;
 	float: left;
 	margin:0, 30px, 0, 20px;
+}
+.con_mid{
+	width:430px;
+	text-align:left;
+	float: left;
+	margin:0, 30px, 0, 0;
 }
 .con_right{
 	width: 350px;
 	float: left;
 }
+#postwrap::after{
+	content:"";
+	display: block;
+	clear: both;
+}
 
 em{
 	color:red;
-	font-size:13px;
+	font-size:11px;
 	font-weight:bold;
 }
 #redstar{
@@ -64,8 +81,8 @@ em{
 }
 #textBox{
 	width: 660px;
-	height: 152px;
-    line-height: 50px;
+	height: 62px;
+    line-height: 31px;
     padding: 10px;
     outline: 0;
     resize: none;
@@ -79,8 +96,6 @@ p{
 p span{
 	font-size: 12px;
 }
-
-h3{
-	margin-left:25px;
+.tos{
+	display:none;
 }
-
