@@ -5,8 +5,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>개인정보 수집 및 이용 동의</title>
-		<link rel="stylesheet" href="agree.css">
-		<script src="agree.js"></script>
+		<link rel="stylesheet" href="../common/css/agree.css">
+		<script src="../common/script/agree.js"></script>
 	</head>
 	<body>
 		<div id="bigwrap1">
