@@ -92,44 +92,21 @@ function postcode(){
 /* 비밀번호 input 타입 변경 */
 function pwd_change(){
 	var pwd = document.getElementById("password");
-	var chk_pwd = document.getElementById("check_password");
-	var btn = document.getElementById("pwd_btn");
 		
-	if(pwd.type=="password" && chk_pwd.type=="password"){
+	if(pwd.type=="password"){
 		pwd.type="text";
-		chk_pwd.type="text";
-		btn.value="비밀번호 가리기";
-	}else if(pwd.type=="text" && chk_pwd.type=="text"){
+	}else if(pwd.type=="text"){
 		pwd.type="password";
-		chk_pwd.type="password";
-		btn.value="비밀번호 보기";
 	}
 }
-function email(){
-	var opt = document.sMail;
-	
-	
-}
-	
-function emailChange(){
-	var opt = document.getElementById("emailList");
-	var optTxt = opt.options[opt.selectedIndex].text;
-	var optTxx = document.getElementById('emailBody');
-	
-	emailText();
-
-}
-
-function emailText(){
-	var txx = document.getElementById("emailBody");
-	var opt = document.getElementById("textOption");
+function chk_change(){
+	var chk_pwd = document.getElementById("check_password");
 		
-	var radioArray = document.getElementsByName("radioOption");
-            for (var i = 0; i < radioArray.length; i++) {
-                if (radioArray[i].value == opt.value) {
-                    radioArray[i].checked = true;
-                }
-			}
+	if(chk_pwd.type=="password"){
+		chk_pwd.type="text";
+	}else if(chk_pwd.type=="text"){
+		chk_pwd.type="password";
+	}
 }
 
 /* 가입 이유 글자수 표시 */
@@ -144,10 +121,6 @@ function counter(text,length){
 	}
 	document.getElementById("cntsp").innerHTML = str + " / " + lmt;	
 }
-
-
-
-
 
 /* 취소, 리셋 */
 function goBack(){
@@ -203,8 +176,6 @@ function signUpCheck(){
 		alert("비밀번호를 다시 입력해주세요.");
 		join.check_password.focus();
 	}
-
-	
 	
 	else if(check.password.value!=check.check_password.value){
 		alert("비밀번호가 일치하지 않습니다.")
@@ -221,8 +192,7 @@ function signUpCheck(){
 	/* 기존 폼에 이메일은 2분할, 휴대전화는 3분할로 되어있어서 나중에 분할하고 추가하는 작업을 할 것임
 		alert 부분은 신경 안 쓰셔도 됨
 	*/
-	
-	
+
 	else if(check.address.value.length==0){
 		alert("주소를 입력해주세요. 아래에 있는 카카오api");
 		join.address.focus();

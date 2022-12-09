@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 	<html>
@@ -13,7 +13,7 @@
 			<div class="loginwrap">
 				<form action="LoginServlet" method="post" id="frm" name=frm>
 					<div class="loginMenu">
-						<div class="loing_h1">
+						<div class="login_h1">
 							<h1 onclick="gohome()">D O B O N G</h1>
 						</div>
 						<div class="login_id">
