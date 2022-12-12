@@ -63,9 +63,9 @@
 								<input type="hidden" id="record" value="${recordsPerPage }">
 								<!--  <input type="hidden" name="number" value="0">-->
 								<select name="recordsPerPage"> 
-									<option value="5"> 5개식 보기</option> 
-									<option value="10" selected> 10개식 보기</option>
-									<option value="15" > 15개식 보기</option>
+									<option value="5"> 5개씩 보기</option> 
+									<option value="10" selected> 10개씩 보기</option>
+									<option value="15" > 15개씩 보기</option>
 								</select>
 								<input type="submit" value="보기">
 							</form>

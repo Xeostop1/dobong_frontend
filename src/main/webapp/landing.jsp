@@ -17,9 +17,14 @@
 	    <!-- common -->
 		<script src="common/script/landing.js"></script> 
 		<link rel="stylesheet" href="common/css/landing.css">
+		<link rel="stylesheet" href="wrap.css">
 	</head>
 	<body>
 		<div id="wrap">
+		
+		<jsp:include page="header.jsp"></jsp:include>
+		<p>목요일 전까지 랜딩페이지, 헤더, 푸터 수정 및 마무리, 틀만잡아둠</p>
+		<p>이후 게시판 작업</p>
 			<div id="header">
 			<% 	
 				MemberDTO m=null;
@@ -58,32 +63,34 @@
 				</div>
 			</div>
 		
-		<!--상위 카테고리 -->
+			<!--상위 카테고리 -->
 			<div id="category">
-					 <c:forEach items="${shortpage }" var="shortpage"> 
-							<div class="category_menu">
-								<ul>
-									<li> <a href="#">${shortpage.getShortpage() } </a> </li>
-								</ul>
-								<div class="category_place">
-									<c:forEach items="${details }" var="details">
-							 			<c:if test="${shortpage.getShortpage() eq  details.getShortpage()}">
-							 				<ul class="business"> 
-							 					<li><a href="detailServlet?number=${details.getNumber() }">${details.getDetailpage() }</a></li>
-							 				</ul>
-					 					</c:if>
-							 		</c:forEach>
-								</div>
-							</div>
-					</c:forEach>
+				 <c:forEach items="${shortpage }" var="shortpage"> 
+					<div class="category_menu">
+						<ul>
+							<li> <a href="#">${shortpage.getShortpage() } </a> </li>
+						</ul>
+						<div class="category_place">
+							<c:forEach items="${details }" var="details">
+					 			<c:if test="${shortpage.getShortpage() eq  details.getShortpage()}">
+					 				<ul class="business"> 
+					 					<li><a href="detailServlet?number=${details.getNumber() }">${details.getDetailpage() }</a></li>
+					 				</ul>
+			 					</c:if>
+					 		</c:forEach>
+						</div>
+					</div>
+				</c:forEach>
 			</div>
-			
+		
 			<!-- 이미지 슬라이더 div추가 -->
-				<div id="img" class="slide">
-					<c:forEach items="${imglist }" var="imglist">
-						<div class="slideImg"><img src="${imglist.getImageurl() }" alt="noImage"></div>
-					</c:forEach>
-				</div>
-		</div>
+			<div id="img" class="slide">
+				<c:forEach items="${imglist }" var="imglist">
+					<div class="slideImg"><img src="${imglist.getImageurl() }" alt="noImage"></div>
+				</c:forEach>
+			</div>
+		
+			<jsp:include page="footer.jsp"></jsp:include>
+		</div>		
 	</body>
 </html>

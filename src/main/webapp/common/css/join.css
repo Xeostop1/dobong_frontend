@@ -75,7 +75,11 @@ html{
 	right:12px;
 	bottom:11px;
 	background-image: url("eye.png");
+	visibility: hidden;
 	cursor: pointer;
+}
+#passwordwrap1:hover .eyes1{
+	visibility: visible;
 }
 #passwordwrap2{
 	position: relative;
@@ -88,7 +92,11 @@ html{
 	right:12px;
 	bottom:11px;
 	background-image: url("eye.png");
+	visibility: hidden;
 	cursor: pointer;
+}
+#passwordwrap2:hover .eyes2{
+	visibility: visible;
 }
 .post1{
 	margin-top:10px;
@@ -126,7 +134,7 @@ html{
 	-webkit-overflow-scrolling:touch;
 }
 #post_code{
-	width: 170px;
+	width: 215px;
 	height: 50px;
 	border-radius: 30px;
 	padding-left: 20px;
@@ -200,4 +208,5 @@ p span{
 	color: white;
 	font-size: 1.2em;
 	letter-spacing: 2px;
+	cursor: pointer;
 }
