@@ -1,7 +1,10 @@
 function gohome(){
-	//랜딩서블릿으로 갈수 있게 수정
- 	location.href="LandingServlet";
- }
+	if(window.confirm("작성한 정보가 모두 사라집니다. 정말 돌아가시겠습니까?")){
+		location.href="LandingServlet";
+	}else{
+		return false;
+	}	
+}
 /* 유효성 체크 추후 작성 파일만 미리 분할 */
 	
 function check() {

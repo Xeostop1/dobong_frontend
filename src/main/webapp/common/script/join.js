@@ -1,8 +1,7 @@
 function gohome(){
 	if(window.confirm("작성한 정보가 모두 사라집니다. 정말 돌아가시겠습니까?")){
 		location.href="LandingServlet";
-	}
-	else{
+	}else{
 		return false;
 	}	
 }

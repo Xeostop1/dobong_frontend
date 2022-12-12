@@ -28,7 +28,7 @@
 	<%
 			if(m.getAdmin()==0){		
 	%>		
-			<div id="adminpage" onclick="location.href='RegisterUpdateServlet?userid=${loginUser.id }'"><a href="RegisterUpdateServlet?userid=${loginUser.id }">마이 페이지</a></div>
+			<div id="mypage" onclick="location.href='RegisterUpdateServlet?userid=${loginUser.id }'"><a href="RegisterUpdateServlet?userid=${loginUser.id }">마이 페이지</a></div>
 	<%
 			}
 	
