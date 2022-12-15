@@ -84,13 +84,12 @@ a{
 } 
 
 /*=====로고 사이즈 수정=====*/
-#logo img{
+img{
 	width: 15%;
 	padding-top: 20px;
 }
 /*=======카테고리=============*/
 .category_menu li{
-	padding-left:20px;
 	list-style: none;
 }
 .category_menu li a{
@@ -101,22 +100,43 @@ a{
 	position: relative;
 	left: 120px;
 	top: -50px;
-	display: none;
+	visibility: hidden;
+	height:110px;
 }
 .business{
 	display: block; 
 }
 .category_menu:hover .category_place{
-	display: block;
+	visibility: visible;
 }
 
 
 .category_menu ul:hover li {
-	border-bottom: 3px solid black;
+	text-decoration: underline;
+	text-underline-position : under;
+	text-underline-offset : 3px;
+	text-decoration-thickness:4px;
 }
 
 
 /*=========사이드메뉴============*/
-#category{
-	display: inline-block;
+#category, #img{
+	float: left;
 }
+#category{
+	margin-left:10px;
+	width:200px;
+}
+#category_menu{
+	width:200px;
+}
+#category_menu:nth-child(n+1){
+	margin-top:-40px;
+}
+#business{
+	margin-bottom:5px;
+	padding:5px;
+	position: relative;
+	text-align: center;
+}	
+

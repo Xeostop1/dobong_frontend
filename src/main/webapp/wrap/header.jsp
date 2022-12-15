@@ -4,7 +4,7 @@
 
 <div id="header">
 	<div class="first_menu">
-		<div id="home" onclick="location.href='landing.jsp'">DOBONG</div>
+		<div id="home" onclick="location.href='LandingServlet'">DOBONG</div>
 		<div id="gnb">
 		<% 	
 			MemberDTO m=null;
