@@ -82,32 +82,12 @@ img{
 	display:block;
 	clear:both;
 }
-.second_menu{
-	width:100%;
-	margin-top:-65px;
-	background-color: black;
-	font-weight:bold;
-	text-align:center;
-	cursor: pointer;
-}
-.second_menu a{
-	color:white;
-	display: inline-block;
-	margin-left:10px;
-	margin-right:10px;
-	font-weight: bold;
-	padding:10px;
-	text-align:center;
-}
 #header:after{
 	content:"";
 	display:block;
 	clear:both;
 }
 @media screen and (max-width: 650px){
-	hr, .second_menu{
-		display: none;
-	}
 	#gnb{
 		width:100px;
 		text-align:center;
@@ -170,6 +150,35 @@ ul.icons li a:hover{
 }
 .label{
 	display: none;
+}
+.notice li{
+	display: inline-block;
+}
+.notice li a span{
+	color:white;
+	font-size:12px;
+	text-align: center;
+}
+.notice li a span:hover{
+	text-decoration: underline;
+	color:red;
+}
+.notice li:nth-child(n+2){
+	position: relative;
+	margin-left: 5px;
+	padding-left: 10px;
+}
+.notice li:nth-child(n+2)::after{
+	position:absolute;
+	left:0;
+	top:3px;
+	content:"";
+	width:1px;
+	height:11px;
+	background-color: white;
+}
+.notice li:nth-child(3){
+	font-weight: bold;
 }
 .copy li{
 	color:white;

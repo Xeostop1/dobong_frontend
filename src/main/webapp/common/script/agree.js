@@ -12,6 +12,9 @@ function closePop(){
 	window.open('', '_self', '');
 	window.close();
 }
+function goback(){
+	window.history.back(-1);
+}
 
 //약관 모두 체크, 모두 체크 해제 기능
 

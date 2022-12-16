@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="Beans.MemberDTO"  %>
-	
 
 <!-- Footer -->
 <footer id="footer">
@@ -24,6 +23,21 @@
 				<i class="lab la-instagram"></i>
 				<span class="label">Instagram</span>
 			</a>
+		</li>
+	</ul>
+	<!-- notice & tos -->
+	<ul class="notice">
+		<li>
+			<a href="NoticeServlet"><span>공지사항</span></a>
+		</li>
+		<li>
+			<a href="tos/tos1_footer.jsp"><span>서비스 이용약관</span></a>
+		</li>
+		<li>
+			<a href="tos/tos2_footer.jsp"><span>개인정보 수집 및 이용</span></a>
+		</li>
+		<li>
+			<a href="noticeWrite.jsp"><span>글쓰기</span></a>
 		</li>
 	</ul>
 	<!-- Menu -->

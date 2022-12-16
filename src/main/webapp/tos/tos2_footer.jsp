@@ -9,9 +9,9 @@
 		<script src="../common/script/agree.js"></script>
 	</head>
 	<body>
-		<div id="bigwrap1">
-			<jsp:include page="tos1.jsp"></jsp:include>
-			<p class="btnP"><button type="button" onclick="closePop()">닫기</button></p>
+		<div id="bigwrap2">
+			<jsp:include page="tos2.jsp"></jsp:include>
+			<p class="btnP"><button type="button" onclick="goback()">뒤로</button></p>
 		</div>
 		<br>
 	</body>

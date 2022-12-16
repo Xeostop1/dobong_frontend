@@ -38,15 +38,8 @@
 		<%		
 				}
 			}
-		%>	
-			
-			
+		%>		
 		</div>
-	</div>
-	<div class="second_menu">
-		<a href="NoticeServlet">공지사항</a>
-		<a href="noticeWrite.jsp">글쓰기</a>
-		<a>또쓰기</a>
 	</div>
 </div>
 <hr>
