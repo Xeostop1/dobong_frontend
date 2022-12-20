@@ -21,15 +21,12 @@ public class LandingServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("main Get 실행");
 		MainDAO DAO=MainDAO.getInstance();
-		
 		detailDAO dDAO=detailDAO.getInstance();
 		
-		
-		List<ImageDTO> imglist=DAO.getLandmarkImg();
-		
+		List<ImageDTO> imglist=DAO.getLandmarkImg();	
 		List<detailDTO> shortpage=dDAO.selectShortpage();
 		List<detailDTO> details=dDAO.selectAllDetail();
-		System.out.println("대분류 "+shortpage);
+		//System.out.println("대분류 "+shortpage);
 		
 		request.setAttribute("imglist", imglist);
 		request.setAttribute("shortpage", shortpage);

@@ -25,6 +25,10 @@ public class detailServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("utf-8");
+		detailDAO dDAO=detailDAO.getInstance();
+		List<detailDTO> shortpage=dDAO.selectShortpage();
+		List<detailDTO> details=dDAO.selectAllDetail();
+
 		String number=request.getParameter("number");
 		System.out.println("detail_Get 실행 "+number);	//메인에서 오는 값을 확인함
 		
@@ -32,6 +36,8 @@ public class detailServlet extends HttpServlet {
 		List<detailDTO> detail=DAO.selectDetailPage(number); 
 		System.out.println(detail+"큰 카테고리확인");	
 		
+		request.setAttribute("shortpage", shortpage);
+		request.setAttribute("details",details);
 		request.setAttribute("detail", detail);
 		RequestDispatcher dis=request.getRequestDispatcher("detail.jsp");
 		dis.forward(request, response);
