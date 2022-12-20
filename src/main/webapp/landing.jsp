@@ -22,7 +22,6 @@
 	</head>
 	<body>
 		<div id="wrap">
-		
 		<jsp:include page="wrap/header.jsp"></jsp:include>
 		<div id="contents">
 			<!--상위 카테고리 -->
