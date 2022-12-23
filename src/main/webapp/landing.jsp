@@ -29,7 +29,7 @@
 				 <c:forEach items="${shortpage }" var="shortpage"> 
 					<div class="category_menu">
 						<ul>
-							<li> <a href="#">${shortpage.getShortpage() } </a> </li>
+							<li> <a href="#">${shortpage.getShortpage() }</a> </li>
 						</ul>
 						<div class="category_place">
 							<c:forEach items="${details }" var="details">
