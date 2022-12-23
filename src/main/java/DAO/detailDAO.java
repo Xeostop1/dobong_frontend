@@ -81,7 +81,6 @@ public class detailDAO {
 		//대분류만 보여줄 수 있는 메서드
 		public List<detailDTO> selectShortpage() {
 			List<detailDTO> shortpage=new ArrayList<detailDTO>();
-			
 			String sql="select distinct shortpage from intropage;";		//intropage테이블에서 shortpage컬럼 distinct(중복의 제거,별개) 하여 select(보여달라)
 			Connection conn=null;
 			PreparedStatement pstmt=null;
@@ -105,10 +104,50 @@ public class detailDAO {
 			return shortpage;
 		} 
 		
+		//===========================
+		// 선택된 대분류만 보여주기 xeo:12/22 추가
+		//===========================
+		public List<detailDTO> selectShortPageView(String shortpage){
+			List<detailDTO> detailPage=new ArrayList<detailDTO>();
+			
+//			String param="%"+shortpage+"%";//이렇게 안하고 바로 like "스트링" 해도 충분히 검색됨!!
+			String sql="select * from intropage where shortpage like ? and visible=1";
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			try {
+				conn=getConn();
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, shortpage);
+				rs=pstmt.executeQuery();
+				while (rs.next()) {
+					detailDTO d=new detailDTO();
+					d.setNumber(rs.getInt("number"));	//넘버가 필요해서 추가함
+					d.setShortpage(rs.getString("shortpage"));
+					d.setDetailpage(rs.getString("detailpage"));
+					d.setImageurl(rs.getString("imageurl"));
+					
+					d.setApi_latitude(rs.getString("api_latitude"));
+					d.setApi_longitude(rs.getString("api_longitude"));
+					detailPage.add(d);
+				}
+			} catch (Exception e) {
+				System.out.println("ShortPageView() 디테일페이지에서 메뉴보여주기 SQL 접속오류 "+e);
+			}finally {
+				detailDAO.close(conn, pstmt, rs); 	
+			}
+			System.out.println(detailPage);
+			return detailPage ;
+		} 
+		
+		
+		
+		
 		//대분류로 소분류의 자세한 내용보기 //0919: 프로토 타입으로 %문화%만 넣음 
 		//대분류에서 클릭된 링크를 ?=파라미터를 통해 넣어주고 아규먼트는 
 		//pstmt에 setString으로 소분류만 불어와 줄 수 있게 세팅함 
-		//여기에 detailPage 어레이리스트를 디테일jsp에서 보여줌(이건 서블릿에서 사용)
+		//여기에 detailPage 어레이리스트를 디테일 jsp에서 보여줌(이건 서블릿에서 사용)
 		
 		public List<detailDTO> selectDetailPage(String shortpage){
 			List<detailDTO> detailPage=new ArrayList<detailDTO>();

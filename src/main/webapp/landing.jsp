@@ -35,7 +35,8 @@
 							<c:forEach items="${details }" var="details">
 					 			<c:if test="${shortpage.getShortpage() eq  details.getShortpage()}">
 					 				<ul class="business"> 
-					 					<li><a href="detailServlet?number=${details.getNumber() }">${details.getDetailpage() }</a></li>
+					 				<!--수정 get값에 쇼트페이지값 추가 xeo: 12/22  -->
+					 					<li><a href="detailServlet?number=${details.getNumber() }&shortpage=${shortpage.getShortpage()}"> ${details.getDetailpage() }</a></li>
 					 				</ul>
 			 					</c:if>
 					 		</c:forEach>
