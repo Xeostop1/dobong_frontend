@@ -37,7 +37,7 @@
 					</a>
 					<!-- 같은 대메뉴 업체보기 -->						
 					<!-- 업체타이틀 -->
-					vender에서 업체타이틀 가져오기 12/22 
+					<!--  vender에서 업체타이틀 가져오기 12/22--> 
 					<h1>${detail.getDetailpage() }</h1>
 					<input type="hidden" value="${detail.getNumber() }"> <img
 						alt="1" src="${detail.getImageurl() }">
