@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+a{
+	text-decoration:none;
+	color:black;
+}
+a:visited{
+	color:#770088;
+}
+table a:active, table a:hover{
+	text-decoration: underline;
+}
+#contents{
+	text-align: -webkit-center;
+}
+table{
+	width:1000px;
+	text-align:center;
+	border-collapse : collapse;
+	border-spacing: 0;
+	border-left:0;
+	border-right:0;
+}
+tr{
+	border-left:0;
+	border-right:0;
+}
+th, td{
+	height:25px;
+	border-top:1px solid #ccc;
+	border-left:0;
+	border-right:0;
+	padding:8px;
+	font-size: 13px;
+}
+.th_title, .th_nickname, .td_title, .td_nickname{
+	text-align: left;
+}
+.th_number{
+	width:40px;
+}
+.th_title{
+	width:600px;
+}
+.th_nickname{
+	width:150px;
+}
+.th_time{
+	width:160px;
+}

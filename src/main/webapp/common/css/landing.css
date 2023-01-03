@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/*=======슬라이더 부분======= */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.slide {
+	/*visibility:hidden;  */
+	position: absolute;
+	transform: translateY(-50);
+	top: 43%;
+	left: 167px;
+	width: 90vw;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: -318px;;
+	margin-left: -14px;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.slide .slideImg>img {
+	width: 90vw;
+	height: 750px;
+	/*위에 지정한 div 영역이랑 넓이가 같아야 함 그래야 이미지가 꽉차게 들어감*/
+	/*높이를 자식이 이미지에서 세팅  */
+}
+/*---버튼수정---*/
+.slide .prevArrow {
+	position: absolute;
+	padding-left: 8px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50);
+	color: white;
+	z-index: 9;
+	font-size: 1.5em;
+	opacity: 0.7;
+}
+
+.slide .nextArrow {
+	position: absolute;
+	padding-right: 8px;
+	right: 0;
+	top: 50%;
+	color: white;
+	z-index: 9;
+	transform: translateY(-50);
+	font-size: 1.5em;
+	opacity: 0.7;
+}
+/*하단 도트 수정 폰트어썸 Arrow 사용*/
+.slide li button {
+	border: none;
+	background: #d1d1d1;
+	color: transparent;
+	cursor: pointer;
+	display: block;
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	padding: 0;
+	width: 11px;
+	height: 11px;
+}
+
+.slide li {
+	list-style: none;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 6px;
+	padding: 0;
+}
+
+.slick-dots {
+	display: inline-block;
+	vertical-align: middle;
+	margin: auto 0;
+	padding-left: 450px;
+	margin-top: -100px;
+	opacity: 0.8;
+	color: white;
+}
+
+.slick-dots li.slick-active button {
+	background-color: transparent;
+	border: 1px solid #ccc;
+	opacity: 0.7;
+}
+
+/*=====로고 사이즈 수정=====*/
+img {
+	width: 15%;
+	padding-top: 20px;
+}
+/*=======카테고리=============*/
+.category_menu{
+	margin-bottom: -30px;	
+}
+.category_menu li {
+	list-style: none; 
+}
+
+.category_menu li a {
+	font-size: 25px;
+}
+
+.category_place {
+	/*  visibility: hidden;*/
+	position: relative;
+	left: 142px;
+	top: -50px;
+	visibility: hidden;
+	/*height: 142px;*/
+	/* 업체명 한줄로 보기 수정:xeo 12/23*/
+	width: 250px;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 1px;
+}
+
+.business {
+	display: block;
+}
+.business > li{
+	margin-left: -25px;
+}
+.business>li>a {
+	font-weight: bold;
+	color: white;
+}
+
+.category_menu:hover .category_place {
+	visibility: visible;
+}
+
+.category_menu ul:hover li {
+	text-decoration: underline;
+	text-underline-position: under;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 4px;
+}
+
+/*=========사이드메뉴============*/
+#category, #img {
+	float: left;
+}
+
+#category {
+	margin-left: 10px;
+	width: 200px;
+}
+
+#category_menu {
+	width: 200px;
+}
+
+#category_menu:nth-child(n+1) {
+	margin-top: -40px;
+}
+
+#business {
+	margin-bottom: 5px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+}

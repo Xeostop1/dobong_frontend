@@ -1,0 +1,309 @@
+@charset "EUC-KR";
+/*  width: 800px;*/
+* {
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+a, a:link, a:visited {
+	text-decoration: none;
+}
+
+body {
+	background-color: #f6f6f6;
+	display: flex;
+	justify-content: center;
+	
+}
+
+:root { 
+	--color-theme: rgb(22, 163, 255);
+}
+/*=====헤더, 푸터=====*/
+/* 헤더 영역 */
+/* xeo: 추가 border-raius */
+#header {
+	padding: 15px 0 15px 0;
+	background-color: black;
+	letter-spacing: 3px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#home {
+	width: 150px;
+	color: white;
+	font-size: 1.9em;
+	font-weight: bold;
+	font-family: fantasy;
+	line-height: 90px;
+	height: 90px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+#gnb {
+	width: 150px;
+	text-align: center;
+	float: right;
+	margin-right: 4px;
+	background-color: black;
+}
+
+#gnb a {
+	/*color: orange;  */
+	color: var(--color-theme);
+}
+
+#gnb>div {
+	width: 100%;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 45px;
+	height: 45px;
+	cursor: pointer;
+}
+
+#login {
+	margin-bottom: -2px;
+}
+
+#signup {
+	margin-top: -2px;
+}
+
+/*xeo: 수정 폰트사이즈*/
+#gnb>div:hover, #gnb a:hover {
+	text-decoration: none;
+	background-color: white;
+	border-radius: 15px;
+	font-size: 18px;
+}
+
+.first_menu:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#header:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+@media screen and (max-width: 650px) {
+	#gnb {
+		width: 100px;
+		text-align: center;
+		float: right;
+		background-color: black;
+		letter-spacing: 0;
+	}
+	#gnb>div {
+		width: 100px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#header {
+		padding: 10px 30px 10px 30px;
+		background-color: black;
+		height: 150px;
+		letter-spacing: 0;
+	}
+	#home {
+		width: 100px;
+		font-size: 1.1em;
+		height: 40px;
+		line-height: 40px;
+	}
+	#gnb {
+		float: left;
+	}
+}
+/* 푸터 영역 */
+/* xeo: 추가 border-raius */
+#footer {
+	background-color: black;
+	justify-content: center;
+	line-height: 1em;
+	text-align: center;
+	padding: 1.3em;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+	#footer {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+.icons {
+	font-size: 2em;
+	padding: 5px 10px;
+}
+
+ul.icons li {
+	display: inline-block;
+}
+
+ul.icons li a {
+	color: white;
+}
+
+ul.icons li a:hover {
+	color: #f5efed;
+}
+
+.label {
+	display: none;
+}
+/*xeo: 추가 .notice 패딩마진변경 */
+.notice{
+	margin-left: -60px;
+
+}
+.notice li {
+	display: inline-block;
+}
+
+.notice li a span {
+	color: white;
+	font-size: 12px;
+	text-align: center;
+}
+
+.notice li a span:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+.notice li:nth-child(n+2) {
+	position: relative;
+	margin-left: 5px;
+	padding-left: 10px;
+}
+
+.notice li:nth-child(n+2)::after {
+	position: absolute;
+	left: 0;
+	top: 3px;
+	content: "";
+	width: 1px;
+	height: 11px;
+	background-color: white;
+}
+
+.notice li:nth-child(3) {
+	font-weight: bold;
+}
+/*xeo: 추가 폰트사이즈 조정*/
+.copy li {
+	color: white;
+	font-size: 13px;
+}
+
+/*====미디어 쿼리 사이즈 고정 ======
+@media ( min-width : 650px) {
+	.wrap {
+		width: 640px;
+	}
+}
+
+@media ( max-width : 650px) {
+	.wrap {
+		width: 90vw;
+	}*/
+/*=====wrap========  */
+#wrap {
+	width: 800px;
+	min-height: 100vh;
+	margin-top: 80px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+/*=====업체 사진, 타이틀=======  */
+.vendor {
+	padding-top: 40px;
+	border-radius: 10px;
+}
+
+.vendor_nav {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cul_logo {
+	width: 80px;
+	padding-bottom: 10px;
+}
+
+.vendor_nav>img {
+	display: block;
+	width: 800px;
+	height: 400px;
+}
+
+.vendor_nav a {
+	margin-left: 26px;
+	margin-right: -35px;
+}
+
+.vendor_nav>h2 {
+	font-size: 25px;
+}
+/*---업체 타이틀----*/
+.vendor_nav>h1 {
+	font-size: 45px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	margin-left: 165px;
+}
+/*=====텍스트 마이닝=======  */
+.textMinning {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.input_textminning {
+	margin-left: 20px;
+	margin-right: 15px;
+	width: 590px;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 25px;
+}
+
+.submit_textminning {
+	width: 150px;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+	font-size: 25px;
+	padding: 10px;
+}
+
+#container {
+	height: 300px;
+}
+/*--텍스트마이닝 로고 숨김----*/
+.anychart-credits {
+	visibility: hidden;
+}
+
+/*=====지도=======  */
+.map_css {
+	width: 800px;
+	margin-bottom: 40px;
+}
