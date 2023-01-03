@@ -10,32 +10,6 @@
 		<link rel="icon" href="images/icon1.ico">
 		<link rel="stylesheet" href="./common/css/notice.css">
 		<script src="./common/script/notice.js"></script>
-
-		
-		<style>
-
-			html{
-				width:100%;
-			}
-			table{
-			width:70%;
-				text-align:center;
-				margin:0 auto;
-				border:0;
-				border-spacing: 0;
-			}
-			body{
-				width:99%;
-				text-align:center;
-				margin:0 auto;
-			}
-			#write_btn:after{
-				content:"";
-				display:block;
-				clear:both;
-			}
-			
-		</style>
 	</head>
 	<body>
 	<div id="wrap">
@@ -46,34 +20,36 @@
 		 <jsp:include page="loginPage.jsp"></jsp:include> 
 		</c:if>
 		<br>
-		<table border="1" style="text-align: center;">
-		<thead>
-			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>작성일</th>
-			</tr>
+		<table>
+			<thead>
+				<tr>
+					<th class="th_number">번호</th>
+					<th class="th_title">제목</th>
+					<th class="th_nickname">작성자</th>
+					<th class="th_time">작성일</th>
+				</tr>
 			</thead>
-					<c:forEach items="${noticeList }" var="noticeList">
-						<tr>
-							<td>${noticeList.getNumber() }</td>
-							<td> <a href="NoticeContentServlet?number=${noticeList.getNumber()}"> ${noticeList.getTitle() }</a></td> 
-							<td>${noticeList.getNickname() }</td>
-							<td>${noticeList.getWritingtime() }</td>
-						</tr>
-					</c:forEach>
-					<tfoot>
+			<tbody>
+				<c:forEach items="${noticeList }" var="noticeList">
 					<tr>
-						<td colspan="7">
-							<form action="NoticeServlet" method="get">
-								<input type="hidden" name="currentPage" value="${currentPage }"> <!--이거왜 벨류가 1이지??? -->
-								<input type="hidden" id="record" value="${recordsPerPage }">
-								<!--  <input type="hidden" name="number" value="0">-->
-								<select name="recordsPerPage"> 
-									<option value="5"> 5개씩 보기</option> 
-									<option value="10" selected> 10개씩 보기</option>
-									<option value="15" > 15개씩 보기</option>
+						<td>${noticeList.getNumber() }</td>
+						<td class="td_title"><a href="NoticeContentServlet?number=${noticeList.getNumber()}"> ${noticeList.getTitle() }</a></td> 
+						<td class="td_nickname">${noticeList.getNickname() }</td>
+						<td>${noticeList.getWritingtime() }</td>
+					</tr>
+				</c:forEach>
+			</tbody>		
+			<tfoot>
+				<tr>
+					<td colspan="11">
+						<form action="NoticeServlet" method="get">
+							<input type="hidden" name="currentPage" value="${currentPage }"> <!--이거왜 벨류가 1이지??? -->
+							<input type="hidden" id="record" value="${recordsPerPage }">
+							<!--  <input type="hidden" name="number" value="0">-->
+							<select name="recordsPerPage"> 
+								<option value="5"> 5개씩 보기</option> 
+								<option value="10" selected> 10개씩 보기</option>
+								<option value="15" > 15개씩 보기</option>
 								</select>
 								<input type="submit" value="보기">
 							</form>
@@ -91,7 +67,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="7">
+						<td colspan="11">
 							<form action="searchServlet">
 								<select name="select"> 
 									<option value="1" selected>전체</option>
@@ -105,7 +81,6 @@
 							<a href="noticeWrite.jsp"> <input type="button" value="글쓰기"> </a>
 						</td>		
 					</tr>
-					
 				</tfoot>
 			</table>
 		<!-- <form action="NoticePageServlet" method="get">
@@ -142,7 +117,6 @@
 			</c:forEach>
 		</ul> 
 		<br><a href="noticeWrite.jsp"> <input type="button" value="글쓰기"> </a>-->
-		<br><a href="LandingServlet">홈으로</a>
 		</div>
 		<jsp:include page="wrap/footer.jsp"></jsp:include>
 	</div>
