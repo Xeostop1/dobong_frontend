@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.content_header > div{
+	width:500px;
+	padding:10px;
+	border:1px solid black;
+}
+
+
+fieldset{
+	width:900px;
+	height: 800px;
+	
+}
+a{
+	text-decoration: none;
+}
+td{
+	border: 1px solid #ccc;
+}
+#wrap{
+	text-align: center;
+}
+table{
+	margin:0 auto;
+}
+#hei{
+	
+	height:600px;	
+}

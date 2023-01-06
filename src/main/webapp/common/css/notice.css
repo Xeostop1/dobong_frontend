@@ -13,6 +13,24 @@ table a:active, table a:hover{
 #contents{
 	text-align: -webkit-center;
 }
+.tb_btn{
+	width:1020px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+.tb_btn > div{
+	display:inline-block;
+	padding:10px;
+}
+.tb_btn input{
+	width:80px;
+	height:35px;
+	background-color:rgb(22, 163, 255);
+	color: white;
+	border:0;
+	font-weight: bold;
+}
 table{
 	width:1000px;
 	text-align:center;
@@ -47,4 +65,15 @@ th, td{
 }
 .th_time{
 	width:160px;
+}
+fieldset {
+	border:0;
+}
+.paging a{
+	padding:1px;
+	font-size:14px;
+}
+.paging li{
+	font-size:14px;
+	display: inline-block;
 }

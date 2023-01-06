@@ -9,33 +9,37 @@
 		<!-- 아이콘 -->
 		<link rel="icon" href="images/icon1.ico">
 		<link rel="stylesheet" href="wrap/wrap.css">
-		<style type="text/css">
-			a{
-				text-decoration: none;
-			}
-			td{
-				border: 1px solid #ccc;
-			}
-			#wrap{
-				text-align: center;
-			}
-			table{
-				margin:0 auto;
-			}
-			#hei{
-				
-				height:600px;
-				
-				
-			}
-		</style>
+		<link rel="stylesheet" href="./common/css/noticeContent.css">
 	</head>
 	<body>
 	<div id="wrap">
 	<jsp:include page="wrap/header.jsp"></jsp:include>
 		<h1>내용 확인페이지</h1>
-		 <div id="contents">  
-		 <table>
+		<p>table이 아닌 div로 변경 예정</p>
+		<div id="contents">  
+			<div class="content_header">
+				<div>
+					<span>제목 :</span>
+					<span> 제목을 넣어주세요 </span>
+				</div>
+				<div>
+					<span>작성자 :</span>
+					<span>${content.getNickname()}</span>
+					
+				</div>
+				<div>
+					<span>작성일자</span>
+					<span>${content.getWritingtime() }</span>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<fieldset>
+				<legend>내용</legend>
+				<p>내용 밑부분에는 notice.jsp가 보이게 include 사용예정</p>
+			</fieldset>
+		<table>
 				<th colspan="3">내용 </th>
 				<th colspan="2">작성일자 </th>
 				<th colspan="1">글쓴이 </th>

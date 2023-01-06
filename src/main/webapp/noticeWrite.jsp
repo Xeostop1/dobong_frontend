@@ -8,19 +8,23 @@
 		<title>공지사항</title>
 		<!-- 아이콘 -->
 		<link rel="icon" href="images/icon1.ico">
-		<style> 
-			ol{
-				float:left;
-				border:1px solid black;
-			}
-		</style>
+		<link rel="stylesheet" href="./common/css/noticeWrite.css">
+		<script src="./common/script/noticeWrite.js"></script>
 	</head>
 	<body>
+	<div id="wrap">
+				
+			<div class="login_h1">
+				<h1 onclick="gohome()">공지사항 글쓰기</h1>
+			</div>
+	
+		
 		<c:choose>
 			<c:when test="${!empty loginUser.id }">
-				<h1>공지사항 글쓰기 </h1>
-				<table>
-					<form action="NoticeWriteServlet" method="post">
+				
+				<form action="NoticeWriteServlet" method="post">
+					<table>
+					
 						<c:if test="${!empty loginUser.id }">
 							<tr> 
 								<td><input value="${loginUser.id }" name="id"></td> 
@@ -41,15 +45,17 @@
 								<input type="reset" value="다시작성">
 							</td>
 						</tr>
-					</form>
-				</table>
+					</table>
+				</form>
 			</c:when>
 			<c:otherwise>
+		
 				<script>
 					alert("글쓰기는 로그인 사용자만 가능합니다.");
 					location.href="login.jsp";
 				</script>				
 			</c:otherwise>
 		</c:choose>
+		</div>
 	</body>
 </html>
